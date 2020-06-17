@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  outline: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #FFF;
+  font-family: 'Work Sans', sans-serif;
+  color: #222222;
+}
+.quote {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  color: #333333;
+  font-size: 42px;
+  line-height: 120%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 200px;
+  margin: 0 auto;
+}
+.quote p {
+  position: relative;
+  flex: 1 auto;
+}
+.quote p:before {
+  content: url('../img/quote-sign.svg');
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  display: none;
+}
+@media only screen and (max-width: 420px) {
+  .quote {
+    width: auto;
+    max-width: 80%;
+    padding: 0 0 20% 0;
+  }
+  .quote p {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .quote p:after {
+    content: url(../img/quote-sign-mobile.svg);
+    display: block;
+    margin: 20% 0 0 -3px;
+  }
+}
+@media only screen and (max-height: 667px) {
+  .quote p:after {
+    margin-top: 10%;
+  }
+}
+.author {
+  width: 435px;
+  height: 287px;
+  position: absolute;
+  top: 50%;
+  right: -79px;
+  margin-top: -144px;
+}
+.author img {
+  width: 100%;
+  display: block;
+}
+@media only screen and (max-width: 420px) {
+  .author {
+    display: none;
+  }
+}
+.refresh-quote {
+  color: #333333;
+  position: absolute;
+  bottom: 45px;
+  left: 50px;
+  padding-left: 40px;
+  opacity: 0.5;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease-in-out;
+}
+.refresh-quote:before {
+  content: url(../img/refresh-icon.svg);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+  transition: transform 0.3s ease-in-out;
+}
+.refresh-quote:hover {
+  opacity: 0.9;
+}
+.refresh-quote:hover:before {
+  transform: rotate(-180deg);
+}
+@media only screen and (max-width: 420px) {
+  .refresh-quote {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    font-size: 0.9rem;
+  }
+  .refresh-quote:before {
+    transform: scale(0.8);
+    top: -6px;
+  }
+  .refresh-quote:hover:before {
+    transform: scale(0.8);
+  }
+}
+/*# sourceMappingURL=style.css.map */
