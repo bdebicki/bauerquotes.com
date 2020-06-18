@@ -107,20 +107,21 @@ body {
 .refresh-quote:hover:before {
   transform: rotate(-180deg);
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 1024px) {
   .refresh-quote {
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 50px;
-    font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 1 !important;
   }
   .refresh-quote:before {
-    transform: scale(0.8);
-    top: -6px;
+    display: none;
   }
   .refresh-quote:hover:before {
-    transform: scale(0.8);
+    transform: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

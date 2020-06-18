@@ -30,12 +30,10 @@ body {
 	line-height: 120%;
 	align-items: center;
 	justify-content: center;
-	padding-right: 200px;
-	// padding-left: 10%;
+	padding-right: 200px;	
 	margin: 0 auto;
 
-	p {
-		// max-width: 70%;
+	p {		
 		position: relative;
 		flex: 1 auto;
 
@@ -128,21 +126,22 @@ body {
 		}
 	}
 
-	@media only screen and (max-width: 420px) {
-		display: inline-block;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 50px;
-		font-size: 0.9rem;
+	@media only screen and (max-width: 1024px) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 3;
+		opacity: 1 !important;
 
 		&:before {
-			transform: scale(.8);
-			top: -6px
+			display: none;
 		}
 
 		&:hover {
 			&:before {
-				transform: scale(.8);
+				transform: none;
 			}
 		}
 	}
