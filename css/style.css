@@ -46,7 +46,7 @@ body {
   .quote {
     width: auto;
     max-width: 80%;
-    padding: 0 0 20% 0;
+    padding: 0;
   }
   .quote p {
     text-align: center;
@@ -116,6 +116,9 @@ body {
     left: 0;
     z-index: 3;
     opacity: 1 !important;
+    text-indent: -9999px;
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   .refresh-quote:before {
     display: none;
