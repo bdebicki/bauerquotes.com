@@ -6,7 +6,7 @@
     "url": "git://github.com/bdebicki/bauerquotes.com"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "rm -rf ./dist/* && webpack --mode production",
     "watch": "webpack-dev-server --content-base public"
   },
   "devDependencies": {

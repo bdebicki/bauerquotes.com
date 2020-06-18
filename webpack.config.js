@@ -11,7 +11,7 @@ const config = {
 	],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bauerquotes.js',
+		filename: 'bauerquotes.[hash].js',
 	},
 	resolve: {
 		modules: [__dirname, 'node_modules'],
@@ -45,7 +45,10 @@ const config = {
 			},
 			{
 				test: /\.svg$/,
-				loader: 'file-loader'
+				loader: 'file-loader',
+				options: {
+					name: '[name].[hash].[ext]',
+				}
 			},
 			{
 				test: /\.html$/,
@@ -58,7 +61,7 @@ const config = {
 			template: './src/views/index.html',
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'bauerquotes.css',
+			filename: 'bauerquotes.[hash].css',
 		}),
 	],
 };
