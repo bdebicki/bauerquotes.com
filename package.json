@@ -12,12 +12,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "if $PRE_COMMIT_HOOK; then lint-staged; fi",
-      "pre-push": "if $PRE_PUSH_HOOK; then eslint ./src --ext .js --ext .jsx; fi"
+      "pre-commit": "int-staged",
+      "pre-push": "npm run eslint"
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js}": [
       "eslint",
       "git add"
     ]
