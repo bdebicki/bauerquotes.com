@@ -5,8 +5,6 @@ import drawQuote from './drawQuote';
 function updateQuote() {
   const quotesContainer = getElementByData(QUOTES_CONTAINER);
 
-  console.log(quotesContainer);
-
   quotesContainer.textContent = drawQuote();
 }
 
