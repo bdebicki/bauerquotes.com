@@ -5,7 +5,7 @@ import { QUOTES_CONTAINER } from '../enums/jsHandlers';
 function drawNewQuoteIndex() {
   const quotesLength = quotes.length;
   const quotesContainer = getElementByData(QUOTES_CONTAINER);
-  const currentIndex = parseInt(quotesContainer.dataset.index);
+  const currentIndex = Number(quotesContainer.dataset.index);
   let newIndex;
 
   do {
