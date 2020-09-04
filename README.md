@@ -1,4 +1,4 @@
-# buerquotes.com
+# bauerquotes.com
 
 ## commands
 `npm install` - install dependencies  
