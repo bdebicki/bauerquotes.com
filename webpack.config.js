@@ -10,7 +10,7 @@ const config = {
 		'./src/less/app.less',
 	],
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'public'),
 		filename: 'bauerquotes.[hash].js',
 	},
 	resolve: {
